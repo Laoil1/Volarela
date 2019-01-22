@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb56e41f63be2a2468c9a1d20830a71a, type: 3}
+  m_Name: Osatrio
+  m_EditorClassIdentifier: 
+  psname: Ostario
+  age: 54
+  description: Aime beacoup les glaces au kiwi

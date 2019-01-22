@@ -1,0 +1,335 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3d6137ae4d9d74a94e897992a8959b, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  AllCharacters:
+  - name: Regina
+    description: 
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    animator: {fileID: 0}
+    inventoryIcon: {fileID: 0}
+    inventoryImage: {fileID: 0}
+    neutralSprites:
+    - {fileID: 0}
+    - {fileID: 21300000, guid: 7a5b6021568734c45867acdab690a541, type: 3}
+    angrySprites:
+    - {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
+    - {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
+    proudSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    mockingSprites: []
+    gaySprites: []
+    surprisedSprites: []
+    happySprites: []
+    thinkingSprites: []
+  - name: Nicolage
+    description: 
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    animator: {fileID: 0}
+    inventoryIcon: {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
+    inventoryImage: {fileID: 0}
+    neutralSprites:
+    - {fileID: 0}
+    - {fileID: 21300000, guid: b244815e2607afb42a0a60f78ad78822, type: 3}
+    angrySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    proudSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    mockingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    gaySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    surprisedSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    happySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    thinkingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+  - name: Douanier
+    description: "Nom : Brand-Ah Peisset \r\n\r\nOrigine : Sota-lo-ventenois  \r\n\r\n\xC2ge
+      : 45 ans \r\n\r\nLe Douanier en chef de l'\xEEle, il est inflexible, et \xE0
+      parfaitement confiance dans les comp\xE9tences des agents de la DiZ. "
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    animator: {fileID: 0}
+    inventoryIcon: {fileID: 0}
+    inventoryImage: {fileID: 0}
+    neutralSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    angrySprites:
+    - {fileID: 21300000, guid: a40510a776358d542a54bfcc381a608a, type: 3}
+    - {fileID: 21300000, guid: a40510a776358d542a54bfcc381a608a, type: 3}
+    proudSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    mockingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    gaySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    surprisedSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    happySprites:
+    - {fileID: 21300000, guid: dd0efc5224b59f44aa80590cec8d2873, type: 3}
+    - {fileID: 21300000, guid: b5307c7de257e52448e50de5392e64a7, type: 3}
+    thinkingSprites:
+    - {fileID: 21300000, guid: a6f64d7e5ff8fce4898e7f29381c519f, type: 3}
+    - {fileID: 21300000, guid: a6f64d7e5ff8fce4898e7f29381c519f, type: 3}
+  - name: Douanier
+    description: 
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    animator: {fileID: 0}
+    inventoryIcon: {fileID: 0}
+    inventoryImage: {fileID: 0}
+    neutralSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    angrySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    proudSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    mockingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    gaySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    surprisedSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    happySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    thinkingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+  - name: Garde
+    description: "Nom : Intregach Djaourdi \r\n\r\nOrigine : Kebir (gilf)  \r\n\r\n\xC2ge
+      : 29 ans \r\n\r\nL'un des gardes les plus efficaces de la Douane, il a parfois
+      tendance \xE0 faire passer son jugement personnel avant les ordres.  "
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    animator: {fileID: 0}
+    inventoryIcon: {fileID: 0}
+    inventoryImage: {fileID: 0}
+    neutralSprites:
+    - {fileID: 21300000, guid: fd041d6c924c4e24f954c3101f27feac, type: 3}
+    - {fileID: 21300000, guid: eaf453d313a99ab42a05cc8f4b7d1ee9, type: 3}
+    angrySprites:
+    - {fileID: 21300000, guid: ca75cfa5522a2ba4a8d8c038901ae21b, type: 3}
+    - {fileID: 21300000, guid: 81384fad1f3f41a49b5e6f1dda7b1dc7, type: 3}
+    proudSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    mockingSprites:
+    - {fileID: 21300000, guid: 0cfcd3491f25bd346b2b033dbdbad170, type: 3}
+    - {fileID: 21300000, guid: 1bcfb94bf21651b4182f402f30d2c610, type: 3}
+    gaySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    surprisedSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    happySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    thinkingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+  - name: Informaticienne
+    description: "Nom : Art\xE9a Aribit  \r\n\r\n\xC2ge : 37 ans \r\n\r\nOrigine :
+      Subrevivanaise\u202F \r\n\r\nConsciencieuse et tr\xE8s motiv\xE9e par son travail.
+      Ne pr\xEAte pas attention au monde qui l'entoure lorsqu'elle est concentr\xE9e.
+      \  "
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    animator: {fileID: 0}
+    inventoryIcon: {fileID: 0}
+    inventoryImage: {fileID: 0}
+    neutralSprites:
+    - {fileID: 21300000, guid: c6fc10a3d264f0643b7ab798b88457af, type: 3}
+    - {fileID: 21300000, guid: 9ea7a9bacec73dc48b05068f6ab223bd, type: 3}
+    angrySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    proudSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    mockingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    gaySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    surprisedSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    happySprites:
+    - {fileID: 21300000, guid: 2d7c708a82018004a8fc02b80d0ab0f1, type: 3}
+    - {fileID: 21300000, guid: 27515bea7c84b35479e65f660d847bd9, type: 3}
+    thinkingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+  - name: Touriste
+    description: "Nom : Nevassadari Rena  \r\n\r\nOrigine : Isclunienne  \r\n\r\n\xC2ge
+      : 22 ans \r\n\r\nVoyage pour le plaisir et pour la d\xE9couverte. Elle appr\xE9cie
+      tout particuli\xE8rement les panoramas majestueux.  "
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    animator: {fileID: 0}
+    inventoryIcon: {fileID: 0}
+    inventoryImage: {fileID: 0}
+    neutralSprites:
+    - {fileID: 21300000, guid: 50138bbcfb61b994ab31b834ff71d559, type: 3}
+    - {fileID: 21300000, guid: b53c08e5c0faf334ea843c9c2494fe23, type: 3}
+    angrySprites:
+    - {fileID: 21300000, guid: c4124c5fad8c1ea4bbe997a759068660, type: 3}
+    - {fileID: 21300000, guid: 7594944a8f1fad540aaa4de5b799a541, type: 3}
+    proudSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    mockingSprites:
+    - {fileID: 21300000, guid: fd76594722a89184eb6ecbc559d58c35, type: 3}
+    - {fileID: 21300000, guid: 6c32a98a3916c0e4ab1a247fedf0d341, type: 3}
+    gaySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    surprisedSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    happySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    thinkingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+  - name: PIAT
+    description: "Nom : Vous pouvez lui choisir le nom que vous souhaitez \r\n\r\nOrigine
+      : Cr\xE9\xE9 par l'Assembleur \r\n\r\n\xC2ge : Ind\xE9termin\xE9 \r\n\r\nVotre
+      PIAT n'est pas n'importe quel PIAT, puisqu'il est le v\xF4tre. Avec lui, vous
+      vivrez de nombreuses aventures !  "
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    animator: {fileID: 0}
+    inventoryIcon: {fileID: 0}
+    inventoryImage: {fileID: 0}
+    neutralSprites:
+    - {fileID: 21300000, guid: 4b48dd5aaa87e6c419354c20560fcf8a, type: 3}
+    - {fileID: 0}
+    angrySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    proudSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    mockingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    gaySprites:
+    - {fileID: 21300000, guid: e6311c8a211d34e45843c21be7922579, type: 3}
+    - {fileID: 21300000, guid: ce82965f38b455842abf6c5bb2aa495f, type: 3}
+    surprisedSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    happySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    thinkingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+  AllGoals:
+  - name: P001
+    description: "Parler \xE0 PIAT"
+    isDiscovered: 0
+    isValidate: 0
+  - name: P002
+    description: "R\xE9tablir les communications"
+    isDiscovered: 0
+    isValidate: 0
+  - name: P003
+    description: "Remplir le Rapport d'Enqu\xEAte"
+    isDiscovered: 0
+    isValidate: 0
+  - name: P004
+    description: Aller au bureau du douanier
+    isDiscovered: 0
+    isValidate: 0
+  - name: P005
+    description: Interroger le garde
+    isDiscovered: 0
+    isValidate: 0
+  - name: P006
+    description: Interroger la touriste
+    isDiscovered: 0
+    isValidate: 0
+  - name: P007
+    description: Interroger l'informaticienne
+    isDiscovered: 0
+    isValidate: 0
+  - name: P008
+    description: Ouvrir la salle des communications
+    isDiscovered: 0
+    isValidate: 0
+  - name: P009
+    description: "Trouver la salle secr\xE8te"
+    isDiscovered: 0
+    isValidate: 0
+  - name: P010
+    description: "Fouiller la salle secr\xE8te"
+    isDiscovered: 0
+    isValidate: 0
+  AllItems:
+  - name: Badge
+    description: "Un Laisser-passer pour la majorit\xE9 des b\xE2timents de l'\xEEle.
+      R\xE9serv\xE9 au personnel qui a fait ses preuves."
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    inventoryIcon: {fileID: 21300000, guid: 32bb3af0af2b7194da1c17e082bd6491, type: 3}
+    inventoryImage: {fileID: 0}
+    explaination: "Voici le badge du garde. Gr\xE2ce \xE0 lui, tu pourras te rendre
+      dans la salle des communications. Il suffit juste de t'y rendre, le reste se
+      fera tout seul !"
+  - name: Boucle d'oreille
+    description: "Une boucle d'oreille de go\xFBt, dont le fermoir est cass\xE9. Son
+      origine est difficile \xE0 d\xE9terminer."
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    inventoryIcon: {fileID: 21300000, guid: 88babe067c4bdca4883b435358b47ed9, type: 3}
+    inventoryImage: {fileID: 0}
+    explaination: "Et bien voil\xE0 un indice de choix ! Tu vas pouvoir interroger
+      les suspects en leur pr\xE9sentant cette preuve !"
+  - name: Emeteur-Recepteur
+    description: "Un appareil complexe et pr\xE9cieux permettant de transmettre et
+      de recevoir les informations sur une grande distance."
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    inventoryIcon: {fileID: 21300000, guid: c038e4da899b4a846b801e9cb35bc0e1, type: 3}
+    inventoryImage: {fileID: 0}
+    explaination: "F\xE9licitations, tu viens de retrouver l'emetteur-r\xE9cepteur,
+      mais pas encore le coupable... Au moins les communications vont-elles pouvoir
+      revenir \xE0 la normale..."

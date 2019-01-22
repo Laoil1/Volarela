@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a3d6137ae4d9d74a94e897992a8959b, type: 3}
+  m_Name: Data 1
+  m_EditorClassIdentifier: 
+  AllCharacters:
+  - name: Regina
+    description: 
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    animator: {fileID: 0}
+    inventoryIcon: {fileID: 0}
+    neutralSprites:
+    - {fileID: 0}
+    - {fileID: 21300000, guid: 7a5b6021568734c45867acdab690a541, type: 3}
+    angrySprites:
+    - {fileID: 0}
+    - {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
+    proudSprites: []
+    mockingSprites: []
+    gaySprites: []
+    surprisedSprites: []
+    happySprites: []
+    thinkingSprites: []
+  - name: Nicolage
+    description: 
+    isDiscovered: 0
+    objectSprite: {fileID: 0}
+    animator: {fileID: 0}
+    inventoryIcon: {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
+    neutralSprites:
+    - {fileID: 0}
+    - {fileID: 21300000, guid: b244815e2607afb42a0a60f78ad78822, type: 3}
+    angrySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    proudSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    mockingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    gaySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    surprisedSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    happySprites:
+    - {fileID: 0}
+    - {fileID: 0}
+    thinkingSprites:
+    - {fileID: 0}
+    - {fileID: 0}
+  AllGoals: []
+  AllItems: []
