@@ -6,7 +6,7 @@ using VolarelaNS.IGO;
 
 public interface IMenuButton 
 {
-	InGameObjectBase target 
+	InGameObjectBase igo 
 	{
 		get;
 		set;

@@ -8,7 +8,6 @@ namespace VolarelaNS.IGO {
 	public class Item : InGameObjectBase {
 		
 		[Header("Item Parameters")]
-		public Sprite objectSprite;
 		public Sprite inventoryIcon;
 		public Sprite inventoryImage;
 

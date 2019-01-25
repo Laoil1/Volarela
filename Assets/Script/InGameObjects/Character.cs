@@ -7,7 +7,6 @@ namespace VolarelaNS.IGO {
 	public class Character : InGameObjectBase {
 
 		[Header("Character's Parameters")]
-		public Sprite objectSprite;
 		public Animator animator;
 
 		[HideInInspector]

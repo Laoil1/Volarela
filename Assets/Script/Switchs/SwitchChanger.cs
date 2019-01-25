@@ -6,7 +6,6 @@ using VolarelaNS.Switchs;
 namespace VolarelaNS.NotEditable{
 	public class SwitchChanger : MonoBehaviour {
 
-
 		public void SetSwitchTrue (Switch _switch){
 			_switch.state = true;
 		}
@@ -15,7 +14,7 @@ namespace VolarelaNS.NotEditable{
 			_switch.state = false;
 		}
 
-		public void ChangeSwitchState (Switch _switch){
+		public void SetSwitchToogle (Switch _switch){
 			_switch.state = !_switch.state;
 		}
 	}

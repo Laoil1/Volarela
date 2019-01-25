@@ -1,29 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEditor;
 
 namespace VolarelaNS
 {
-    using IGO;
-    using UnityEngine.UI;
-
-    namespace Menu
-    {
-        public class CharaMenuButton : MonoBehaviour, IMenuButton
-        {
-            [HideInInspector]
-            public Character charTarget;            
+	using IGO;
+	namespace Menu
+	{
+		public class ObjectiveMenuButton : MonoBehaviour, IMenuButton
+		{
+  			[HideInInspector]
+            public Goal goalTarget;
             public InGameObjectBase igo
             {
                 get
                 {
-                    return charTarget;
+                    return goalTarget;
                 }
 
                 set
                 {
-                    charTarget = (Character)value;
+                    goalTarget = (Goal)value;
                 }
             }
 
@@ -59,17 +58,14 @@ namespace VolarelaNS
             public void OnClickSetMenu()
             {
                 MenuManager.instance.SetButtonActive(MenuManager.instance.information, true);
-                MenuManager.instance.SetButtonActive(MenuManager.instance.cadre, true);
                 MenuManager.instance.ChangeDescription(igo.description,"");
-                MenuManager.instance.ChangeImage(charTarget.inventoryImage );
             }
 
             public void OnCreated()
             {
                 EditorUtility.SetDirty(this);
-                thisImg.sprite = charTarget.inventoryIcon;
+                thisText.text = goalTarget.name;
             }
-        }
-    }
-
+		}	
+	}
 }

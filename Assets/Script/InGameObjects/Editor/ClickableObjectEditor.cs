@@ -13,8 +13,13 @@ public class ClickableObjectEditor : Editor {
 
 	ClickableObject co;
 
-	public override void OnInspectorGUI(){
+	public void OnEnable()
+	{
 		co = target as ClickableObject;
+		co.SetSprite();
+	}
+
+	public override void OnInspectorGUI(){
 		co.choice = (ClickableObject.Choices)EditorGUILayout.EnumPopup("Type :",co.choice);
 		if (co.choice == ClickableObject.Choices.Character)
 		{
@@ -41,8 +46,7 @@ public class ClickableObjectEditor : Editor {
 			if(GUI.changed){
 				co.displayedObject = GeneralValue.igoData.AllCharacters[co.doIndex];
 				if(co.displayedObject != null){
-					var _chara = (Character)co.displayedObject;
-					co.GetComponent<Image>().sprite = _chara.objectSprite;
+					co.SetSprite();
 				}
 				EditorUtility.SetDirty(target);
 			}
@@ -59,9 +63,9 @@ public class ClickableObjectEditor : Editor {
 
 			if(GUI.changed){
 				co.displayedObject = GeneralValue.igoData.AllItems[co.doIndex];
-				if(co.displayedObject != null){
-					var _item = (Item)co.displayedObject;
-					co.GetComponent<Image>().sprite = _item.objectSprite;
+				if(co.displayedObject != null)
+				{
+					co.SetSprite();
 				}
 				EditorUtility.SetDirty(target);
 			}

@@ -1,29 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEditor;
 
 namespace VolarelaNS
 {
-    using IGO;
-    using UnityEngine.UI;
-
-    namespace Menu
-    {
-        public class CharaMenuButton : MonoBehaviour, IMenuButton
-        {
-            [HideInInspector]
-            public Character charTarget;            
+	using IGO;
+	namespace Menu
+	{
+		public class ItemMenuButton : MonoBehaviour, IMenuButton
+		{
+  			[HideInInspector]
+            public Item itemTarget;
             public InGameObjectBase igo
             {
                 get
                 {
-                    return charTarget;
+                    return itemTarget;
                 }
 
                 set
                 {
-                    charTarget = (Character)value;
+                    itemTarget = (Item)value;
                 }
             }
 
@@ -58,18 +57,18 @@ namespace VolarelaNS
 
             public void OnClickSetMenu()
             {
+                Debug.Log("ItemMenu clicked");
                 MenuManager.instance.SetButtonActive(MenuManager.instance.information, true);
                 MenuManager.instance.SetButtonActive(MenuManager.instance.cadre, true);
-                MenuManager.instance.ChangeDescription(igo.description,"");
-                MenuManager.instance.ChangeImage(charTarget.inventoryImage );
+                MenuManager.instance.ChangeDescription(igo.description,itemTarget.explaination);
+                MenuManager.instance.ChangeImage(itemTarget.inventoryImage );
             }
 
             public void OnCreated()
             {
                 EditorUtility.SetDirty(this);
-                thisImg.sprite = charTarget.inventoryIcon;
+                thisImg.sprite = itemTarget.inventoryIcon;
             }
-        }
-    }
-
+		}	
+	}
 }

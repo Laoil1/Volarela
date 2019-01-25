@@ -13,6 +13,11 @@ namespace VolarelaNS
 
 			public static MenuManager instance;
 			public TextMananger tm;
+			public Image image;
+			public GameObject information;
+			public GameObject cadre;
+
+			public GameObject[] closingList;
 
 			public void Awake()
 			{
@@ -32,6 +37,35 @@ namespace VolarelaNS
 				tm.entry[1] = secondString;
 			}
 
+			public void ChangeImage(Sprite spr)
+			{
+				image.sprite = spr;
+			}
+
+			public void ToogleButton (GameObject button)
+			{
+				button.SetActive(!button.activeInHierarchy);
+			}
+			public void SetButtonActive (GameObject button, bool state)
+			{
+				button.SetActive(state);
+			}
+			public void SetButtonTrue (GameObject button)
+			{
+				button.SetActive(true);
+			}
+			public void SetButtonFalse (GameObject button)
+			{
+				button.SetActive(false);
+			}
+
+			public void CloseAll()
+			{
+				foreach (var item in closingList)
+				{
+					item.SetActive(false);
+				}
+			}
 		}
 	}
 

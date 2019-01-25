@@ -15,11 +15,11 @@ MonoBehaviour:
   - ID: 0
     rect:
       serializedVersion: 2
-      x: 237
-      y: 322
+      x: 62
+      y: 360
       width: 200
       height: 50
-    centerScreen: {x: 217, y: -128}
+    centerScreen: {x: 42, y: -90}
     initialRect:
       serializedVersion: 2
       x: 20
@@ -28,8 +28,8 @@ MonoBehaviour:
       height: 50
     labelRect:
       serializedVersion: 2
-      x: 257
-      y: 332
+      x: 82
+      y: 370
       width: 175
       height: 25
     initialLabelRect:
@@ -58,13 +58,13 @@ MonoBehaviour:
     outPoint:
     - rect:
         serializedVersion: 2
-        x: 437
-        y: 339.5
+        x: 262
+        y: 377.5
         width: 10
         height: 15
       type: 1
       connectedOutNodes: 
-      connectedInNode: 2
+      connectedInNode: -1
       index: 0
     style:
       m_Name: 
@@ -478,6 +478,7 @@ MonoBehaviour:
       objectSprite: {fileID: 0}
       animator: {fileID: 0}
       inventoryIcon: {fileID: 0}
+      inventoryImage: {fileID: 0}
       neutralSprites: []
       angrySprites: []
       proudSprites: []
@@ -499,27 +500,27 @@ MonoBehaviour:
   - ID: 1
     rect:
       serializedVersion: 2
-      x: 569
-      y: 147
+      x: 392
+      y: 260
       width: 200
       height: 100
-    centerScreen: {x: 217, y: -128}
+    centerScreen: {x: 42, y: -90}
     initialRect:
       serializedVersion: 2
-      x: 352
-      y: 275
+      x: 350
+      y: 350
       width: 200
       height: 100
     labelRect:
       serializedVersion: 2
-      x: 589
-      y: 187
+      x: 412
+      y: 300
       width: 175
       height: 25
     initialLabelRect:
       serializedVersion: 2
-      x: 372
-      y: 315
+      x: 370
+      y: 390
       width: 175
       height: 25
     title: 
@@ -531,19 +532,19 @@ MonoBehaviour:
     inPoint:
       rect:
         serializedVersion: 2
-        x: 559
-        y: 189.5
+        x: 382
+        y: 302.5
         width: 10
         height: 15
       type: 0
-      connectedOutNodes: 000000000000000000000000
+      connectedOutNodes: 00000000000000000000000000000000
       connectedInNode: 0
       index: 3
     outPoint:
     - rect:
         serializedVersion: 2
-        x: 769
-        y: 162
+        x: 592
+        y: 275
         width: 10
         height: 15
       type: 1
@@ -552,13 +553,13 @@ MonoBehaviour:
       index: 1
     - rect:
         serializedVersion: 2
-        x: 769
-        y: 180
+        x: 592
+        y: 293
         width: 10
         height: 15
       type: 1
       connectedOutNodes: 
-      connectedInNode: 2
+      connectedInNode: -1
       index: 2
     style:
       m_Name: 
@@ -972,6 +973,7 @@ MonoBehaviour:
       objectSprite: {fileID: 0}
       animator: {fileID: 0}
       inventoryIcon: {fileID: 0}
+      inventoryImage: {fileID: 0}
       neutralSprites: []
       angrySprites: []
       proudSprites: []
@@ -993,51 +995,51 @@ MonoBehaviour:
   - ID: 2
     rect:
       serializedVersion: 2
-      x: 744
-      y: 322
+      x: 674
+      y: 369
       width: 200
       height: 100
-    centerScreen: {x: 217, y: -128}
+    centerScreen: {x: 42, y: -90}
     initialRect:
       serializedVersion: 2
-      x: 527
-      y: 450
+      x: 632
+      y: 459
       width: 200
       height: 100
     labelRect:
       serializedVersion: 2
-      x: 764
-      y: 362
+      x: 694
+      y: 409
       width: 175
       height: 25
     initialLabelRect:
       serializedVersion: 2
-      x: 547
-      y: 490
+      x: 652
+      y: 499
       width: 175
       height: 25
     title: 
     dialogueText: 
     isDragged: 0
-    isSelected: 1
+    isSelected: 0
     name: Condition
     emotion: 0
     inPoint:
       rect:
         serializedVersion: 2
-        x: 734
-        y: 364.5
+        x: 664
+        y: 411.5
         width: 10
         height: 15
       type: 0
-      connectedOutNodes: 0100000000000000000000000000000001000000
+      connectedOutNodes: 01000000000000000100000000000000
       connectedInNode: 0
       index: 5
     outPoint:
     - rect:
         serializedVersion: 2
-        x: 944
-        y: 337
+        x: 874
+        y: 384
         width: 10
         height: 15
       type: 1
@@ -1047,7 +1049,7 @@ MonoBehaviour:
     style:
       m_Name: 
       m_Normal:
-        m_Background: {fileID: 2800000, guid: 79d1a4434037e564a9173674ec0d1b8d, type: 3}
+        m_Background: {fileID: 2800000, guid: ac69927420694494982d02d0c00aaf94, type: 3}
         m_ScaledBackgrounds: []
         m_TextColor: {r: 0, g: 0, b: 0, a: 1}
       m_Hover:
@@ -1116,7 +1118,7 @@ MonoBehaviour:
       m_Normal:
         m_Background: {fileID: 0}
         m_ScaledBackgrounds: []
-        m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
       m_Hover:
         m_Background: {fileID: 0}
         m_ScaledBackgrounds: []
@@ -1166,7 +1168,7 @@ MonoBehaviour:
         m_Top: 0
         m_Bottom: 0
       m_Font: {fileID: 0}
-      m_FontSize: 23
+      m_FontSize: 20
       m_FontStyle: 1
       m_Alignment: 3
       m_WordWrap: 0
@@ -1456,6 +1458,7 @@ MonoBehaviour:
       objectSprite: {fileID: 0}
       animator: {fileID: 0}
       inventoryIcon: {fileID: 0}
+      inventoryImage: {fileID: 0}
       neutralSprites: []
       angrySprites: []
       proudSprites: []
@@ -1467,6 +1470,536 @@ MonoBehaviour:
     textAudio: []
     pictures: []
     questions: []
+    questionsLenght: 0
+    answer: []
+    answersLengh: 0
+    textEntry: 
+    approTextEntry: []
+    changingConidition: 0
+    approTextEntryLengh: 0
+  - ID: 5
+    rect:
+      serializedVersion: 2
+      x: 392
+      y: 370
+      width: 200
+      height: 100
+    centerScreen: {x: 42, y: -90}
+    initialRect:
+      serializedVersion: 2
+      x: 350
+      y: 460
+      width: 200
+      height: 100
+    labelRect:
+      serializedVersion: 2
+      x: 412
+      y: 410
+      width: 175
+      height: 25
+    initialLabelRect:
+      serializedVersion: 2
+      x: 370
+      y: 500
+      width: 175
+      height: 25
+    title: 
+    dialogueText: 
+    isDragged: 0
+    isSelected: 0
+    name: Phrase
+    emotion: 0
+    inPoint:
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 412.5
+        width: 10
+        height: 15
+      type: 0
+      connectedOutNodes: 
+      connectedInNode: -1
+      index: 20
+    outPoint:
+    - rect:
+        serializedVersion: 2
+        x: 592
+        y: 385
+        width: 10
+        height: 15
+      type: 1
+      connectedOutNodes: 
+      connectedInNode: -1
+      index: 16
+    - rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 10
+        height: 15
+      type: 1
+      connectedOutNodes: 
+      connectedInNode: -1
+      index: 17
+    - rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 10
+        height: 15
+      type: 1
+      connectedOutNodes: 
+      connectedInNode: -1
+      index: 18
+    - rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 10
+        height: 15
+      type: 1
+      connectedOutNodes: 
+      connectedInNode: -1
+      index: 19
+    style:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 2800000, guid: 0c3f3c4fc82ce4e449ae4cef0b46df96, type: 3}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 4
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    labelStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 20
+      m_FontStyle: 1
+      m_Alignment: 3
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    defaultLabelStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 20
+      m_FontStyle: 1
+      m_Alignment: 3
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    selectedLabelStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 23
+      m_FontStyle: 1
+      m_Alignment: 3
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    defaultNodeStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 2800000, guid: 0c3f3c4fc82ce4e449ae4cef0b46df96, type: 3}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 4
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    selectedNodeStyle:
+      m_Name: 
+      m_Normal:
+        m_Background: {fileID: 2800000, guid: 9f3dc8f5114cf1a449d0e0f30a4aaad5, type: 3}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Hover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Active:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Focused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnNormal:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnHover:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnActive:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_OnFocused:
+        m_Background: {fileID: 0}
+        m_ScaledBackgrounds: []
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_Border:
+        m_Left: 12
+        m_Right: 12
+        m_Top: 12
+        m_Bottom: 12
+      m_Margin:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Padding:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Overflow:
+        m_Left: 0
+        m_Right: 0
+        m_Top: 0
+        m_Bottom: 0
+      m_Font: {fileID: 0}
+      m_FontSize: 0
+      m_FontStyle: 0
+      m_Alignment: 4
+      m_WordWrap: 0
+      m_RichText: 1
+      m_TextClipping: 0
+      m_ImagePosition: 0
+      m_ContentOffset: {x: 0, y: 0}
+      m_FixedWidth: 0
+      m_FixedHeight: 0
+      m_StretchWidth: 1
+      m_StretchHeight: 0
+    ton: 5
+    condition: {fileID: 0}
+    fullText: xd
+    characterTalking:
+      name: Regina
+      description: 
+      isDiscovered: 0
+      objectSprite: {fileID: 0}
+      animator: {fileID: 0}
+      inventoryIcon: {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
+      inventoryImage: {fileID: 0}
+      neutralSprites:
+      - {fileID: 0}
+      - {fileID: 21300000, guid: 7a5b6021568734c45867acdab690a541, type: 3}
+      angrySprites:
+      - {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
+      - {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
+      proudSprites:
+      - {fileID: 0}
+      - {fileID: 0}
+      mockingSprites: []
+      gaySprites: []
+      surprisedSprites: []
+      happySprites: []
+      thinkingSprites: []
+    textAudio:
+    - {fileID: 0}
+    pictures:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    questions:
+    - Je dois y aller
+    - 
+    - 
+    - 
     questionsLenght: 0
     answer: []
     answersLengh: 0
@@ -1478,51 +2011,51 @@ MonoBehaviour:
     ID: 2
     rect:
       serializedVersion: 2
-      x: 744
-      y: 322
+      x: 674
+      y: 369
       width: 200
       height: 100
-    centerScreen: {x: 217, y: -128}
+    centerScreen: {x: 42, y: -90}
     initialRect:
       serializedVersion: 2
-      x: 527
-      y: 450
+      x: 632
+      y: 459
       width: 200
       height: 100
     labelRect:
       serializedVersion: 2
-      x: 764
-      y: 362
+      x: 694
+      y: 409
       width: 175
       height: 25
     initialLabelRect:
       serializedVersion: 2
-      x: 547
-      y: 490
+      x: 652
+      y: 499
       width: 175
       height: 25
     title: 
     dialogueText: 
     isDragged: 0
-    isSelected: 1
+    isSelected: 0
     name: Condition
     emotion: 0
     inPoint:
       rect:
         serializedVersion: 2
-        x: 734
-        y: 364.5
+        x: 664
+        y: 411.5
         width: 10
         height: 15
       type: 0
-      connectedOutNodes: 0100000000000000000000000000000001000000
+      connectedOutNodes: 01000000000000000100000000000000
       connectedInNode: 0
       index: 5
     outPoint:
     - rect:
         serializedVersion: 2
-        x: 944
-        y: 337
+        x: 874
+        y: 384
         width: 10
         height: 15
       type: 1
@@ -1532,7 +2065,7 @@ MonoBehaviour:
     style:
       m_Name: 
       m_Normal:
-        m_Background: {fileID: 2800000, guid: 79d1a4434037e564a9173674ec0d1b8d, type: 3}
+        m_Background: {fileID: 2800000, guid: ac69927420694494982d02d0c00aaf94, type: 3}
         m_ScaledBackgrounds: []
         m_TextColor: {r: 0, g: 0, b: 0, a: 1}
       m_Hover:
@@ -1601,7 +2134,7 @@ MonoBehaviour:
       m_Normal:
         m_Background: {fileID: 0}
         m_ScaledBackgrounds: []
-        m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+        m_TextColor: {r: 0, g: 0, b: 0, a: 1}
       m_Hover:
         m_Background: {fileID: 0}
         m_ScaledBackgrounds: []
@@ -1651,7 +2184,7 @@ MonoBehaviour:
         m_Top: 0
         m_Bottom: 0
       m_Font: {fileID: 0}
-      m_FontSize: 23
+      m_FontSize: 20
       m_FontStyle: 1
       m_Alignment: 3
       m_WordWrap: 0
@@ -1941,6 +2474,7 @@ MonoBehaviour:
       objectSprite: {fileID: 0}
       animator: {fileID: 0}
       inventoryIcon: {fileID: 0}
+      inventoryImage: {fileID: 0}
       neutralSprites: []
       angrySprites: []
       proudSprites: []
@@ -1959,53 +2493,7 @@ MonoBehaviour:
     approTextEntry: []
     changingConidition: 0
     approTextEntryLengh: 0
-  connections:
-  - name: 
-    inPoint:
-      rect:
-        serializedVersion: 2
-        x: 734
-        y: 364.5
-        width: 10
-        height: 15
-      type: 0
-      connectedOutNodes: 0100000000000000000000000000000001000000
-      connectedInNode: 0
-      index: 5
-    outPoint:
-      rect:
-        serializedVersion: 2
-        x: 437
-        y: 339.5
-        width: 10
-        height: 15
-      type: 1
-      connectedOutNodes: 
-      connectedInNode: 2
-      index: 0
-  - name: 
-    inPoint:
-      rect:
-        serializedVersion: 2
-        x: 734
-        y: 364.5
-        width: 10
-        height: 15
-      type: 0
-      connectedOutNodes: 0100000000000000000000000000000001000000
-      connectedInNode: 0
-      index: 5
-    outPoint:
-      rect:
-        serializedVersion: 2
-        x: 769
-        y: 180
-        width: 10
-        height: 15
-      type: 1
-      connectedOutNodes: 
-      connectedInNode: 2
-      index: 2
-  globalConnectionPointIndex: 6
-  globalNodeIndex: 3
-  areANodeSelected: 1
+  connections: []
+  globalConnectionPointIndex: 21
+  globalNodeIndex: 6
+  areANodeSelected: 0

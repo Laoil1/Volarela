@@ -39,6 +39,10 @@ public class CharacterWindows : EditorWindow {
 		if (GUI.changed) 
 		{
 			EditorUtility.SetDirty(GeneralValue.igoData);
+			foreach (var item in GameObject.FindObjectsOfType<ClickableObject>())
+			{
+				item.SetSprite();
+			}
 		}
 	}
 	

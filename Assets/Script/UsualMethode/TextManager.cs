@@ -54,7 +54,7 @@ namespace VolarelaNS {
 		///<para name=characterMax> The max caracter that contain each string of the list. </para>x
 		public static List<string> ConvertLargeText (this string text, int characterMax = 20){
 			var _list = new List<string>();
-			if(text.Length == 0) {return _list;}
+			if(text.Length == 0 || text == null) {return _list;}
 			char[] separator = {'.','?',':'};
 			while (text.Length>=characterMax){
 				var _characterIndex = characterMax;

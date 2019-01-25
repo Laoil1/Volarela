@@ -29,7 +29,11 @@ public class ItemWindows : EditorWindow {
 		}
 		if (GUI.changed) 
 		{
-			EditorUtility.SetDirty(GeneralValue.igoData);
+			EditorUtility.SetDirty(GeneralValue.igoData);			
+			foreach (var item in GameObject.FindObjectsOfType<ClickableObject>())
+			{
+				item.SetSprite();
+			}
 		}
 	}
 

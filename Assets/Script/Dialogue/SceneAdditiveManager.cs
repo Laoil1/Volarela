@@ -8,11 +8,12 @@ namespace VolarelaNS.DialogueNS
 		public static SceneAdditiveManager instance;
 
 		public bool isOnDialogue;
+		public bool isOnMenu;
 
 		public GameObject dialogueObject;
 		public GameObject menuObject;
 
-		void Awake ()
+		public void Awake ()
 		{
 			if(instance == null)
 			{
@@ -47,7 +48,7 @@ namespace VolarelaNS.DialogueNS
 
 		public void ToogleMenu()
 		{
-			menuObject.SetActive(menuObject.activeInHierarchy);
+			menuObject.SetActive(!menuObject.activeInHierarchy);
 		}
 
 	}

@@ -9,9 +9,9 @@ namespace VolarelaNS.DialogueNS
 	public class LoadDialogueAndMenu : MonoBehaviour 
 	{
 
-		public string sceneUIobj;
+		public string sceneUIObj;
 
-		public void Start()
+		private void Start()
 		{
 			Debug.Log(SceneManager.sceneCount);
 			InitializeUIScene();
@@ -21,13 +21,13 @@ namespace VolarelaNS.DialogueNS
 		{
 			if(SceneManager.sceneCount != 2)
 			{
-				SceneManager.LoadScene(sceneUIobj, LoadSceneMode.Additive);
+				SceneManager.LoadScene(sceneUIObj, LoadSceneMode.Additive);
 				return;
 			}
-			if(SceneManager.GetSceneAt(1).name != sceneUIobj)
+			if(SceneManager.GetSceneAt(1).name != sceneUIObj)
 			{
 				SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(1).name);
-				SceneManager.LoadScene(sceneUIobj, LoadSceneMode.Additive);
+				SceneManager.LoadScene(sceneUIObj, LoadSceneMode.Additive);
 			}
 		}
 

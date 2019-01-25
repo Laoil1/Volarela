@@ -8,6 +8,7 @@ namespace VolarelaNS.IGO{
 
 		public string name;
 
+		public Sprite objectSprite;
 
 		//Description of the object
 		[TextArea]

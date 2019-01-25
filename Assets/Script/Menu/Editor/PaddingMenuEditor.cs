@@ -58,40 +58,40 @@ public class PadingMenuEditor : Editor
 
 	private void ItemGUI()
 	{
-		SetMenuButtonGUI<CharaMenuButton>("CharaMenuButton");
+		if(!SetMenuButtonGUI<ItemMenuButton>("CharaMenuButton"))
+		{
+			return;
+		}
 	}
 
 	private void PersoGUI()
 	{
+		if(!SetMenuButtonGUI<CharaMenuButton>("CharaMenuButton"))
+		{
+			return;
+		}
 
+		
 	}
 
 	private void ObjGUI()
 	{
-
+		if(!SetMenuButtonGUI<ObjectiveMenuButton>("CharaMenuButton"))
+		{
+			return;
+		}
 	}
 
-	private void SetMenuButtonGUI<T>(string _Label) where T : IMenuButton
+	private bool SetMenuButtonGUI<T>(string _Label) where T : IMenuButton
 	{
 		padingMenuTarget.menuButton = (GameObject) EditorGUILayout.ObjectField(_Label,padingMenuTarget.menuButton,typeof(GameObject),false);
+		if(padingMenuTarget.menuButton == null){return false;}
 		if(padingMenuTarget.menuButton.GetComponent<T>() == null)
 		{
 			padingMenuTarget.menuButton = null;
+			return false;
 		}
-	}
-
-	private void ClearChild()
-	{
-		foreach (Transform child in padingMenuTarget.self)
-		{
-			Destroy(child.gameObject);
-		}
-		/*
-		foreach (var item in collection)
-		{
-			
-		}
-		 */
+		return true;
 	}
 
 }
