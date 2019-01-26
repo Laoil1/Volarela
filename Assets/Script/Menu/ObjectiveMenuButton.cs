@@ -9,11 +9,12 @@ namespace VolarelaNS
 	using IGO;
 	namespace Menu
 	{
-		public class ObjectiveMenuButton : MonoBehaviour, IMenuButton
+		public class ObjectiveMenuButton : MenuButtonParent, IMenuButton
 		{
-  			[HideInInspector]
+
+            [HideInInspector]
             public Goal goalTarget;
-            public InGameObjectBase igo
+            public override InGameObjectBase igo
             {
                 get
                 {
@@ -27,7 +28,7 @@ namespace VolarelaNS
             }
 
             public Image thisImg;
-            public Image ThisImg 
+            public override Image ThisImg 
             {
                 get
                 {
@@ -41,7 +42,7 @@ namespace VolarelaNS
             }
 
             public Text thisText;
-            public Text ThisText 
+            public override Text ThisText 
             {
                 get
                 {
@@ -53,18 +54,31 @@ namespace VolarelaNS
                     thisText = value;
                 }
             }
+            private GameObject thisGo;
+            public override GameObject ThisGo
+            {
+                get
+                {
+                    return thisGo;
+                }
 
+                set
+                {
+                    thisGo = value;
+                }
+            }
 
-            public void OnClickSetMenu()
+            public override void  OnClickSetMenu()
             {
                 MenuManager.instance.SetButtonActive(MenuManager.instance.information, true);
                 MenuManager.instance.ChangeDescription(igo.description,"");
             }
 
-            public void OnCreated()
+            public override void OnCreated()
             {
                 EditorUtility.SetDirty(this);
                 thisText.text = goalTarget.name;
+                ThisGo = gameObject;
             }
 		}	
 	}

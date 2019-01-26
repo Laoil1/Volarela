@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllCharacters:
   - name: Regina
+    objectSprite: {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
     description: 
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     animator: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
     inventoryImage: {fileID: 0}
@@ -34,9 +34,9 @@ MonoBehaviour:
     happySprites: []
     thinkingSprites: []
   - name: Nicolage
+    objectSprite: {fileID: 0}
     description: 
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     animator: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
     inventoryImage: {fileID: 0}
@@ -65,11 +65,11 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   - name: Douanier
+    objectSprite: {fileID: 0}
     description: "Nom : Brand-Ah Peisset \r\n\r\nOrigine : Sota-lo-ventenois  \r\n\r\n\xC2ge
       : 45 ans \r\n\r\nLe Douanier en chef de l'\xEEle, il est inflexible, et \xE0
       parfaitement confiance dans les comp\xE9tences des agents de la DiZ. "
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     animator: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: ac5bebec622626444a689582169eebe0, type: 3}
     inventoryImage: {fileID: 0}
@@ -98,9 +98,9 @@ MonoBehaviour:
     - {fileID: 21300000, guid: a6f64d7e5ff8fce4898e7f29381c519f, type: 3}
     - {fileID: 21300000, guid: a6f64d7e5ff8fce4898e7f29381c519f, type: 3}
   - name: Benoit
+    objectSprite: {fileID: 0}
     description: 
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     animator: {fileID: 0}
     inventoryIcon: {fileID: 0}
     inventoryImage: {fileID: 0}
@@ -129,11 +129,11 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   - name: Garde
+    objectSprite: {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
     description: "Nom : Intregach Djaourdi \r\n\r\nOrigine : Kebir (gilf)  \r\n\r\n\xC2ge
       : 29 ans \r\n\r\nL'un des gardes les plus efficaces de la Douane, il a parfois
       tendance \xE0 faire passer son jugement personnel avant les ordres.  "
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     animator: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: a14cabbe0a296c041bfe612d6be9690a, type: 3}
     inventoryImage: {fileID: 0}
@@ -162,12 +162,12 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   - name: Informaticienne
+    objectSprite: {fileID: 0}
     description: "Nom : Art\xE9a Aribit  \r\n\r\n\xC2ge : 37 ans \r\n\r\nOrigine :
       Subrevivanaise\u202F \r\n\r\nConsciencieuse et tr\xE8s motiv\xE9e par son travail.
       Ne pr\xEAte pas attention au monde qui l'entoure lorsqu'elle est concentr\xE9e.
       \  "
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     animator: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: c4619816eef490840a9080044fb55803, type: 3}
     inventoryImage: {fileID: 0}
@@ -196,11 +196,11 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   - name: Touriste
+    objectSprite: {fileID: 0}
     description: "Nom : Nevassadari Rena  \r\n\r\nOrigine : Isclunienne  \r\n\r\n\xC2ge
       : 22 ans \r\n\r\nVoyage pour le plaisir et pour la d\xE9couverte. Elle appr\xE9cie
       tout particuli\xE8rement les panoramas majestueux.  "
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     animator: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: 4128f7d10eb83d740972b15795ab6989, type: 3}
     inventoryImage: {fileID: 0}
@@ -229,12 +229,12 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
   - name: PIAT
+    objectSprite: {fileID: 0}
     description: "Nom : Vous pouvez lui choisir le nom que vous souhaitez \r\n\r\nOrigine
       : Cr\xE9\xE9 par l'Assembleur \r\n\r\n\xC2ge : Ind\xE9termin\xE9 \r\n\r\nVotre
       PIAT n'est pas n'importe quel PIAT, puisqu'il est le v\xF4tre. Avec lui, vous
       vivrez de nombreuses aventures !  "
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     animator: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: 7a5b6021568734c45867acdab690a541, type: 3}
     inventoryImage: {fileID: 0}
@@ -264,70 +264,80 @@ MonoBehaviour:
     - {fileID: 0}
   AllGoals:
   - name: P001
+    objectSprite: {fileID: 0}
     description: "Parler \xE0 PIAT"
     isDiscovered: 0
     isValidate: 0
   - name: P002
+    objectSprite: {fileID: 0}
     description: "R\xE9tablir les communications"
     isDiscovered: 0
     isValidate: 0
   - name: P003
+    objectSprite: {fileID: 0}
     description: "Remplir le Rapport d'Enqu\xEAte"
     isDiscovered: 0
     isValidate: 0
   - name: P004
+    objectSprite: {fileID: 0}
     description: Aller au bureau du douanier
     isDiscovered: 0
     isValidate: 0
   - name: P005
+    objectSprite: {fileID: 0}
     description: Interroger le garde
     isDiscovered: 0
     isValidate: 0
   - name: P006
+    objectSprite: {fileID: 0}
     description: Interroger la touriste
     isDiscovered: 0
     isValidate: 0
   - name: P007
+    objectSprite: {fileID: 0}
     description: Interroger l'informaticienne
     isDiscovered: 0
     isValidate: 0
   - name: P008
+    objectSprite: {fileID: 0}
     description: Ouvrir la salle des communications
     isDiscovered: 0
     isValidate: 0
   - name: P009
+    objectSprite: {fileID: 0}
     description: "Trouver la salle secr\xE8te"
     isDiscovered: 0
     isValidate: 0
   - name: P010
+    objectSprite: {fileID: 0}
     description: "Fouiller la salle secr\xE8te"
     isDiscovered: 0
     isValidate: 0
   AllItems:
   - name: Badge
+    objectSprite: {fileID: 21300000, guid: a14cabbe0a296c041bfe612d6be9690a, type: 3}
     description: "Un Laisser-passer pour la majorit\xE9 des b\xE2timents de l'\xEEle.
       R\xE9serv\xE9 au personnel qui a fait ses preuves."
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: 32bb3af0af2b7194da1c17e082bd6491, type: 3}
     inventoryImage: {fileID: 0}
     explaination: "Voici le badge du garde. Gr\xE2ce \xE0 lui, tu pourras te rendre
       dans la salle des communications. Il suffit juste de t'y rendre, le reste se
       fera tout seul !"
   - name: Boucle d'oreille
+    objectSprite: {fileID: 0}
     description: "Une boucle d'oreille de go\xFBt, dont le fermoir est cass\xE9. Son
       origine est difficile \xE0 d\xE9terminer."
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: 88babe067c4bdca4883b435358b47ed9, type: 3}
     inventoryImage: {fileID: 0}
     explaination: "Et bien voil\xE0 un indice de choix ! Tu vas pouvoir interroger
       les suspects en leur pr\xE9sentant cette preuve !"
   - name: Emeteur-Recepteur
+    objectSprite: {fileID: 0}
     description: "Un appareil complexe et pr\xE9cieux permettant de transmettre et
       de recevoir les informations sur une grande distance."
     isDiscovered: 0
-    objectSprite: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: c038e4da899b4a846b801e9cb35bc0e1, type: 3}
     inventoryImage: {fileID: 0}
     explaination: "F\xE9licitations, tu viens de retrouver l'emetteur-r\xE9cepteur,

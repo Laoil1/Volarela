@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114811357866050966}
   - component: {fileID: 114462263597589024}
   - component: {fileID: 114901983958458190}
+  - component: {fileID: 114677129564328674}
   m_Layer: 0
   m_Name: ObjectiveMenu
   m_TagString: Untagged
@@ -132,6 +133,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 0
   m_Text: Pondre des oeufs
+--- !u!114 &114677129564328674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1195766752231316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0fca43d06f6ce249ba39ae85c118fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 114811357866050966}
+  validateSprite: {fileID: 21300000, guid: 47a0ab1babb13fb4a9ff6c0e3233ddd4, type: 3}
+  unvalidateSprite: {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
+  objectiveMenu: {fileID: 114901983958458190}
 --- !u!114 &114811357866050966
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,8 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2add7967e9ad894785752f394985674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   goalTarget:
     name: 
+    objectSprite: {fileID: 0}
     description: 
     isDiscovered: 0
     isValidate: 0

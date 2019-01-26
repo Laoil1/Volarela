@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.UI;
 
 namespace VolarelaNS
@@ -22,6 +23,9 @@ namespace VolarelaNS
 			public RectTransform self;
 			public GameObject menuButton;
 			public PadingType padingType = PadingType.Item;
+			public ActiveChild thisActiveChild;
+			
+
 
 			public void SetPadingMenu()
 			{
@@ -31,33 +35,34 @@ namespace VolarelaNS
 
 			private void SetChild()
 			{
+				thisActiveChild.childsIMB = new List<MenuButtonParent>();
 				switch (padingType)
 				{
 					case PadingType.Item:
-						foreach (var item in GeneralValue.igoData.AllItems)
+						for (var i = 0; i < GeneralValue.igoData.AllItems.Length; i++)
 						{
-							CreateChild<ItemMenuButton>(item);
+							CreateChild<ItemMenuButton>(GeneralValue.igoData.AllItems[i], i);
 						}
 						SetSize();
 						break;
 						
 					case PadingType.Perso:
-						foreach (var chara in GeneralValue.igoData.AllCharacters)
+							for (var i = 0; i < GeneralValue.igoData.AllCharacters.Length; i++)
 						{
-							CreateChild<CharaMenuButton>(chara);
+							CreateChild<CharaMenuButton>(GeneralValue.igoData.AllCharacters[i], i);
 						}
 						SetSize();
 						break;
 						
 					case PadingType.Objectives:
-						
-						foreach (var goal in GeneralValue.igoData.AllGoals)
+						for (var i = 0; i < GeneralValue.igoData.AllGoals.Length; i++)
 						{
-							CreateChild<ObjectiveMenuButton>(goal);
+							CreateChild<ObjectiveMenuButton>(GeneralValue.igoData.AllGoals[i], i);
 						}
 						SetSizeObj();
 						break;
 				}
+				EditorUtility.SetDirty(thisActiveChild);
 			}
 
 			private void DestroyImediateChild()
@@ -68,19 +73,20 @@ namespace VolarelaNS
 				}
 				
 			}
-			private void CreateChild<T> (InGameObjectBase igo) where T : IMenuButton
+			private void CreateChild<T> (InGameObjectBase igo, int i) where T : MenuButtonParent
 			{
 				T elem = Instantiate(menuButton,self).GetComponent<T>() ;
 				elem.igo = igo;
 				elem.OnCreated();
+				elem.index = i;
+				thisActiveChild.childsIMB.Add((T)elem);
+
 			}
 
 			private void SetSize()
 			{
 				var gridLay = (GridLayoutGroup)layoutGroup;
 				self.sizeDelta = new Vector2(0,self.childCount/gridLay.constraintCount*gridLay.cellSize.x+ecartViewPort);
-				Debug.Log(self.childCount);
-				Debug.Log(self.childCount/gridLay.constraintCount*gridLay.cellSize.x+ecartViewPort);
 			}
 
 			private void SetSizeObj()

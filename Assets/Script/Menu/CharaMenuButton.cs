@@ -10,11 +10,13 @@ namespace VolarelaNS
 
     namespace Menu
     {
-        public class CharaMenuButton : MonoBehaviour, IMenuButton
+        public class CharaMenuButton : MenuButtonParent
         {
+            
+            
             [HideInInspector]
             public Character charTarget;            
-            public InGameObjectBase igo
+            public override InGameObjectBase igo
             {
                 get
                 {
@@ -27,8 +29,8 @@ namespace VolarelaNS
                 }
             }
 
-            public Image thisImg;
-            public Image ThisImg 
+            public  Image thisImg;
+            public override Image ThisImg 
             {
                 get
                 {
@@ -42,7 +44,7 @@ namespace VolarelaNS
             }
 
             public Text thisText;
-            public Text ThisText 
+            public override Text ThisText 
             {
                 get
                 {
@@ -54,9 +56,22 @@ namespace VolarelaNS
                     thisText = value;
                 }
             }
+            private GameObject thisGO;
 
+            public override GameObject ThisGo
+            {
+                get
+                {
+                    return thisGO;
+                }
 
-            public void OnClickSetMenu()
+                set
+                {
+                    thisGO = value;
+                }
+            }
+
+            public override void OnClickSetMenu()
             {
                 MenuManager.instance.SetButtonActive(MenuManager.instance.information, true);
                 MenuManager.instance.SetButtonActive(MenuManager.instance.cadre, true);
@@ -64,10 +79,11 @@ namespace VolarelaNS
                 MenuManager.instance.ChangeImage(charTarget.inventoryImage );
             }
 
-            public void OnCreated()
+            public override void OnCreated()
             {
                 EditorUtility.SetDirty(this);
                 thisImg.sprite = charTarget.inventoryIcon;
+                ThisGo = gameObject;
             }
         }
     }

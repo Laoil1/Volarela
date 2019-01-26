@@ -21,7 +21,6 @@ namespace VolarelaNS.IGO{
 		public void SetSprite()
 		{
 			if(displayedObject == null) return;
-			Debug.Log("wesh");
 			GetComponent<SpriteRenderer>().sprite = displayedObject.objectSprite;
 		}
 	}

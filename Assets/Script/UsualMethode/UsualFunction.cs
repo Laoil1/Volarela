@@ -92,4 +92,15 @@ public static class UsualFunction
 			list2[i] = list1[i];
 		}
 	}
+
+		public static T[] CopyToArray<T>(this T[] array1, T[] array2) 
+	{
+		array1 = new T[array2.Length];
+		for (int i = 0; i < array2.Length; i++)
+		{
+			array1[i] = array2[i];
+		}
+
+		return array1;
+	}
 }

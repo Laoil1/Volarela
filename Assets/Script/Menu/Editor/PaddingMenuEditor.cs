@@ -10,6 +10,7 @@ using VolarelaNS.IGO;
 public class PadingMenuEditor : Editor 
 {
 	private PadingMenu padingMenuTarget;
+	private bool enableSet;
 
 	private void OnEnable ()
 	{
@@ -30,10 +31,22 @@ public class PadingMenuEditor : Editor
 		{
 			padingMenuTarget.self = padingMenuTarget.gameObject.GetComponent<RectTransform>();
 		}
+		if(padingMenuTarget.thisActiveChild == null)
+		{
+			padingMenuTarget.thisActiveChild = padingMenuTarget.GetComponent<ActiveChild>();	
+		}
+
+		//	
 	}
+	
 
 	public override void OnInspectorGUI()
 	{
+		if(!enableSet)
+		{
+			SetVar();
+			enableSet =true;
+		}
 		ReferenceGUI();
 	}
 

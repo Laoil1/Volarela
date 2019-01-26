@@ -6,6 +6,11 @@ using VolarelaNS.IGO;
 
 public interface IMenuButton 
 {
+	GameObject ThisGo
+	{
+		get;		
+		set;
+	}
 	InGameObjectBase igo 
 	{
 		get;
