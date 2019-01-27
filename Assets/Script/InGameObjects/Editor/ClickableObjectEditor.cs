@@ -20,13 +20,13 @@ public class ClickableObjectEditor : Editor {
 	}
 
 	public override void OnInspectorGUI(){
-		co.choice = (ClickableObject.Choices)EditorGUILayout.EnumPopup("Type :",co.choice);
-		if (co.choice == ClickableObject.Choices.Character)
+		co.choice = (IGOChoices)EditorGUILayout.EnumPopup("Type :",co.choice);
+		if (co.choice == IGOChoices.Character)
 		{
 			CharacterGUI();
 		}
 
-		if (co.choice == ClickableObject.Choices.Item)
+		if (co.choice == IGOChoices.Item)
 		{
 			ItemGUI();
 		}
@@ -35,7 +35,7 @@ public class ClickableObjectEditor : Editor {
 	}
 
 
-	void CharacterGUI(){
+	private void CharacterGUI(){
 		
 		if(GeneralValue.igoData.AllCharacters.Length != 0){
 			string[] choice = GeneralValue.igoData.AllCharacters.GetAllNameIGO();
@@ -53,7 +53,27 @@ public class ClickableObjectEditor : Editor {
 		}
 	
 	}
-	void ItemGUI(){
+	private void ItemGUI(){
+		
+		if(GeneralValue.igoData.AllItems.Length != 0){
+			string[] choice = GeneralValue.igoData.AllItems.GetAllNameIGO();
+
+			co.doIndex = EditorGUILayout.Popup ("Item",co.doIndex,choice);
+			DrawDefaultInspector();
+
+			if(GUI.changed){
+				co.displayedObject = GeneralValue.igoData.AllItems[co.doIndex];
+				if(co.displayedObject != null)
+				{
+					co.SetSprite();
+				}
+				EditorUtility.SetDirty(target);
+			}
+		}
+
+	}
+
+		private void GoalGUI(){
 		
 		if(GeneralValue.igoData.AllItems.Length != 0){
 			string[] choice = GeneralValue.igoData.AllItems.GetAllNameIGO();

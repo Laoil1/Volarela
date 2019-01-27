@@ -103,4 +103,18 @@ public static class UsualFunction
 
 		return array1;
 	}
+
+	public static T[] RemoveElement<T>(this T[] array, int elemIndex) 
+	{
+		List<T> tempArray = new List<T>();
+		for ( var i =0; i< array.Length; i++)
+		{
+			if(i != elemIndex)
+			{
+				tempArray.Add(array[i]);
+			}
+		}
+
+		return tempArray.ToArray();
+	}
 }

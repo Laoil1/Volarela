@@ -55,6 +55,12 @@ public class ItemWindows : EditorWindow {
 
     void CommonGUI(){
 		currentItem = GeneralValue.igoData.AllItems[itemIndex];
+		
+		if(GUILayout.Button("Delete"))
+		{
+			GeneralValue.igoData.AllItems = GeneralValue.igoData.AllItems.RemoveElement(itemIndex);
+			return;
+		}
         InformationsGUI();
 
 		if(GUI.changed){

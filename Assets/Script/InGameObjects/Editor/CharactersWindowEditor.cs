@@ -83,7 +83,13 @@ public class CharacterWindows : EditorWindow {
 	}
 
 	void CommonGUI(){
-				currentCharacter = GeneralValue.igoData.AllCharacters[characterIndex];
+		currentCharacter = GeneralValue.igoData.AllCharacters[characterIndex];
+
+		if(GUILayout.Button("Delete"))
+		{
+			GeneralValue.igoData.AllCharacters = GeneralValue.igoData.AllCharacters.RemoveElement(characterIndex);
+			return;
+		}
 		
 		GUILayout.Label("Parmaters",EditorStyles.boldLabel);
 		para = (Parameters)EditorGUILayout.EnumPopup(para, GUILayout.Width(300));

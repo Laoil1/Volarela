@@ -51,6 +51,12 @@ public class GoalWindows : EditorWindow {
 
     void CommonGUI(){
 		currentGoal = GeneralValue.igoData.AllGoals[goalIndex];
+		
+		if(GUILayout.Button("Delete"))
+		{
+			GeneralValue.igoData.AllGoals = GeneralValue.igoData.AllGoals.RemoveElement(goalIndex);
+			return;
+		}
         InformationsGUI();
 
 		if(GUI.changed){

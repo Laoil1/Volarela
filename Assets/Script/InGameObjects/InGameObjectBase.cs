@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace VolarelaNS.IGO{
 	[System.Serializable]
-	public class InGameObjectBase  {
+	public class InGameObjectBase {
 
 		public string name;
 

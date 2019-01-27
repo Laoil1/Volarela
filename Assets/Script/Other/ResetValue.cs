@@ -16,8 +16,16 @@ public class ResetSCRObject : EditorWindow {
 				_switch.state = _switch.initialState;
 			}
 		}
-		if(Resources.LoadAll("ScriptableObjects/InGameObjects").ConvertObjects<InGameObjectBase>()!= null){
-			foreach (var _obj in Resources.LoadAll("ScriptableObjects/InGameObjects").ConvertObjects<InGameObjectBase>()){
+		if(GeneralValue.igoData != null){
+			foreach (var _obj in GeneralValue.igoData.AllCharacters){
+				_obj.isDiscovered = false;
+			}
+			
+			foreach (var _obj in GeneralValue.igoData.AllItems){
+				_obj.isDiscovered = false;
+			}
+			
+			foreach (var _obj in GeneralValue.igoData.AllGoals){
 				_obj.isDiscovered = false;
 			}
 		}

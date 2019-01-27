@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VolarelaNS;
+
 
 namespace VolarelaNS.IGO{
 
+	public enum IGOChoices {
+		Character,
+		Item,
+		Goal
+	}
 	public class ClickableObject : MonoBehaviour {
-		public enum Choices {
-			Character,
-			Item
-		}
 		[HideInInspector]
-		public Choices choice;
+		public IGOChoices choice;
 
 		[HideInInspector]
 		public InGameObjectBase displayedObject;

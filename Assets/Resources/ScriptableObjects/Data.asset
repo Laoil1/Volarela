@@ -15,7 +15,7 @@ MonoBehaviour:
   - name: Regina
     objectSprite: {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
     description: 
-    isDiscovered: 0
+    isDiscovered: 1
     animator: {fileID: 0}
     inventoryIcon: {fileID: 21300000, guid: cca6fd8f0981add44bb4f4c828ff3e8e, type: 3}
     inventoryImage: {fileID: 0}
@@ -318,7 +318,7 @@ MonoBehaviour:
     objectSprite: {fileID: 21300000, guid: a14cabbe0a296c041bfe612d6be9690a, type: 3}
     description: "Un Laisser-passer pour la majorit\xE9 des b\xE2timents de l'\xEEle.
       R\xE9serv\xE9 au personnel qui a fait ses preuves."
-    isDiscovered: 0
+    isDiscovered: 1
     inventoryIcon: {fileID: 21300000, guid: 32bb3af0af2b7194da1c17e082bd6491, type: 3}
     inventoryImage: {fileID: 0}
     explaination: "Voici le badge du garde. Gr\xE2ce \xE0 lui, tu pourras te rendre
