@@ -76,7 +76,7 @@ namespace VolarelaNS
 
             public override void OnCreated()
             {
-                EditorUtility.SetDirty(this);
+                // EditorUtility.SetDirty(this);
                 thisText.text = goalTarget.name;
                 ThisGo = gameObject;
             }

@@ -217,194 +217,196 @@ public class Node
         OnRemoveNode = OnClickRemoveNode;
     }
 
-    public void Drag(Vector2 _centerScreen)
-    {
-        rect.position = _centerScreen + initialRect.position;
-        labelRect.position =_centerScreen + initialLabelRect.position;
-        centerScreen = _centerScreen;
-    }
-    public void Selected(Vector2 delta)
-    {
-        initialLabelRect.position += delta;
-        initialRect.position += delta;
-        Drag (centerScreen);
-    }
-    
-    public void Draw()
-    {
-        switch(ton){
-            case TypeOfNode.Start :
-                DrawStart();
-                break;
-            case TypeOfNode.SentenceAnswer :
-                DrawAnswer();
-                break;
-            case TypeOfNode.SentenceQuestion :
-                DrawQuestion();
-                break;
-            case TypeOfNode.ConditionCheck :
-                DrawConditionCheck();
-                break;   
-            case TypeOfNode.ConditionChange :
-                DrawConditionChange();
-                break;           
-            case TypeOfNode.TextEntry :
-                DrawTextEntry();
-                break;
-            case TypeOfNode.End :
-                DrawEnd();
-                break;
-            case TypeOfNode.Cinematique :
-                DrawCine();
-                break;
-        }
-    }
-
-    public void DrawCine()
-    {
-        inPoint.Draw();
-        if(outPoint[0] != null){
-            outPoint[0].Draw();
-        }
-        GUI.Box(rect, title, style);
-        EditorGUI.LabelField(labelRect,name,labelStyle);
-    }
-
-    public void DrawStart(){
-        if(outPoint[0] != null){
-            outPoint[0].Draw();
-        }
-        GUI.Box(rect, title, style);
-        EditorGUI.LabelField(labelRect,name,labelStyle);
-    }
-    public void DrawQuestion(){
-        inPoint.Draw();
-        for (var i = 0; i<=questionsLenght; i++)
+    #if (UNITY_EDITOR) 
+        public void Drag(Vector2 _centerScreen)
         {
-            outPoint[i].Draw(i);
+            rect.position = _centerScreen + initialRect.position;
+            labelRect.position =_centerScreen + initialLabelRect.position;
+            centerScreen = _centerScreen;
         }
-        GUI.Box(rect, title, style);
-        EditorGUI.LabelField(labelRect,name,labelStyle);
-        //EditorGUI.TextField(labelRect,"");
-    }
-
-    public void DrawAnswer(){
-        inPoint.Draw();
-        for (var i = 0; i<=answersLengh; i++)
+        public void Selected(Vector2 delta)
         {
-            outPoint[i].Draw(i);
+            initialLabelRect.position += delta;
+            initialRect.position += delta;
+            Drag (centerScreen);
         }
-        GUI.Box(rect, title, style);
-        EditorGUI.LabelField(labelRect,name,labelStyle);
-        //EditorGUI.TextField(labelRect,"");
-    }
-    public void DrawConditionCheck(){
-        inPoint.Draw();
-        for (var i = 0; i<2; i++)
-        {
-            outPoint[i].Draw(i);
-        }
-        GUI.Box(rect, title, style);
-        condition = (Switch)EditorGUI.ObjectField(labelRect,condition, typeof(Switch), false);
-
-    }
-
-    public void DrawConditionChange()
-    {
-        inPoint.Draw();
-        outPoint[0].Draw(0);
-        GUI.Box(rect, title, style);
-        condition = (Switch)EditorGUI.ObjectField(labelRect,condition, typeof(Switch), false);
-
-    }
-    
-
-    public void DrawTextEntry(){
-        inPoint.Draw();
-        for (var i = 0; i<2; i++)
-        {
-            outPoint[i].Draw(i);
-        }
-        GUI.Box(rect, title, style);
-        textEntry = EditorGUI.TextField(labelRect,textEntry);
-        //EditorGUI.TextField(labelRect,"");
-    }
-    public void DrawEnd(){
-        inPoint.Draw();
-        GUI.Box(rect, title, style);
-        EditorGUI.LabelField(labelRect,name,labelStyle);
-    }
-
-    public bool ProcessEvents(Event e)
-    {
-        switch (e.type)
-        {
-            case EventType.MouseDown:
-                if (e.button == 0)
-                {
-                    if (rect.Contains(e.mousePosition))
-                    {
-                        isDragged = true;
-                        GUI.changed = true;
-                        isSelected = true;
-                        style = selectedNodeStyle;
-                        labelStyle = selectedLabelStyle;
-                        
-                    }
-                    else
-                    {
-                        GUI.changed = true;
-                        isSelected = false;
-                        style = defaultNodeStyle;
-                        labelStyle = defaultLabelStyle;
-                    }
-                }
-
-                if (e.button == 1 && isSelected && rect.Contains(e.mousePosition))
-                {
-                    if(ton != TypeOfNode.Start)
-                    {
-                        ProcessContextMenu();
-                    }
-                        e.Use();
-                }
-                break;
-
-            case EventType.MouseUp:
-                isDragged = false;
-                break;
-
-            case EventType.MouseDrag:
-                if (e.button == 0 && isDragged)
-                {
-                        e.Use();
-                    if(ton != TypeOfNode.Start){
-                        Selected(e.delta);
-                        return true;
-                    }
-                }
-                break;
-        }
-
-        return false;
-    }
-
-    private void UpdateOutPoint(){
         
-    }
-
-    private void ProcessContextMenu()
-    {
-        GenericMenu genericMenu = new GenericMenu();
-        genericMenu.AddItem(new GUIContent("Remove node"), false, OnClickRemoveNode);
-        genericMenu.ShowAsContext();
-    }
-
-    private void OnClickRemoveNode()
-    {
-        if (OnRemoveNode != null)
+        public void Draw()
         {
-            OnRemoveNode(this);
+            switch(ton){
+                case TypeOfNode.Start :
+                    DrawStart();
+                    break;
+                case TypeOfNode.SentenceAnswer :
+                    DrawAnswer();
+                    break;
+                case TypeOfNode.SentenceQuestion :
+                    DrawQuestion();
+                    break;
+                case TypeOfNode.ConditionCheck :
+                    DrawConditionCheck();
+                    break;   
+                case TypeOfNode.ConditionChange :
+                    DrawConditionChange();
+                    break;           
+                case TypeOfNode.TextEntry :
+                    DrawTextEntry();
+                    break;
+                case TypeOfNode.End :
+                    DrawEnd();
+                    break;
+                case TypeOfNode.Cinematique :
+                    DrawCine();
+                    break;
+            }
         }
-    }
+
+        public void DrawCine()
+        {
+            inPoint.Draw();
+            if(outPoint[0] != null){
+                outPoint[0].Draw();
+            }
+            GUI.Box(rect, title, style);
+            EditorGUI.LabelField(labelRect,name,labelStyle);
+        }
+
+        public void DrawStart(){
+            if(outPoint[0] != null){
+                outPoint[0].Draw();
+            }
+            GUI.Box(rect, title, style);
+            EditorGUI.LabelField(labelRect,name,labelStyle);
+        }
+        public void DrawQuestion(){
+            inPoint.Draw();
+            for (var i = 0; i<=questionsLenght; i++)
+            {
+                outPoint[i].Draw(i);
+            }
+            GUI.Box(rect, title, style);
+            EditorGUI.LabelField(labelRect,name,labelStyle);
+            //EditorGUI.TextField(labelRect,"");
+        }
+
+        public void DrawAnswer(){
+            inPoint.Draw();
+            for (var i = 0; i<=answersLengh; i++)
+            {
+                outPoint[i].Draw(i);
+            }
+            GUI.Box(rect, title, style);
+            EditorGUI.LabelField(labelRect,name,labelStyle);
+            //EditorGUI.TextField(labelRect,"");
+        }
+        public void DrawConditionCheck(){
+            inPoint.Draw();
+            for (var i = 0; i<2; i++)
+            {
+                outPoint[i].Draw(i);
+            }
+            GUI.Box(rect, title, style);
+            condition = (Switch)EditorGUI.ObjectField(labelRect,condition, typeof(Switch), false);
+
+        }
+
+        public void DrawConditionChange()
+        {
+            inPoint.Draw();
+            outPoint[0].Draw(0);
+            GUI.Box(rect, title, style);
+            condition = (Switch)EditorGUI.ObjectField(labelRect,condition, typeof(Switch), false);
+
+        }
+        
+
+        public void DrawTextEntry(){
+            inPoint.Draw();
+            for (var i = 0; i<2; i++)
+            {
+                outPoint[i].Draw(i);
+            }
+            GUI.Box(rect, title, style);
+            textEntry = EditorGUI.TextField(labelRect,textEntry);
+            //EditorGUI.TextField(labelRect,"");
+        }
+        public void DrawEnd(){
+            inPoint.Draw();
+            GUI.Box(rect, title, style);
+            EditorGUI.LabelField(labelRect,name,labelStyle);
+        }
+
+        public bool ProcessEvents(Event e)
+        {
+            switch (e.type)
+            {
+                case EventType.MouseDown:
+                    if (e.button == 0)
+                    {
+                        if (rect.Contains(e.mousePosition))
+                        {
+                            isDragged = true;
+                            GUI.changed = true;
+                            isSelected = true;
+                            style = selectedNodeStyle;
+                            labelStyle = selectedLabelStyle;
+                            
+                        }
+                        else
+                        {
+                            GUI.changed = true;
+                            isSelected = false;
+                            style = defaultNodeStyle;
+                            labelStyle = defaultLabelStyle;
+                        }
+                    }
+
+                    if (e.button == 1 && isSelected && rect.Contains(e.mousePosition))
+                    {
+                        if(ton != TypeOfNode.Start)
+                        {
+                            ProcessContextMenu();
+                        }
+                            e.Use();
+                    }
+                    break;
+
+                case EventType.MouseUp:
+                    isDragged = false;
+                    break;
+
+                case EventType.MouseDrag:
+                    if (e.button == 0 && isDragged)
+                    {
+                            e.Use();
+                        if(ton != TypeOfNode.Start){
+                            Selected(e.delta);
+                            return true;
+                        }
+                    }
+                    break;
+            }
+
+            return false;
+        }
+
+        private void UpdateOutPoint(){
+            
+        }
+
+        private void ProcessContextMenu()
+        {
+            GenericMenu genericMenu = new GenericMenu();
+            genericMenu.AddItem(new GUIContent("Remove node"), false, OnClickRemoveNode);
+            genericMenu.ShowAsContext();
+        }
+
+        private void OnClickRemoveNode()
+        {
+            if (OnRemoveNode != null)
+            {
+                OnRemoveNode(this);
+            }
+        }
+    #endif
 }

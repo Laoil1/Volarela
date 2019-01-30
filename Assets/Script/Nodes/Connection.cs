@@ -17,24 +17,26 @@ public class Connection
         this.OnClickRemoveConnection = OnClickRemoveConnection;
     }
 
-    public void Draw()
-    {
-        Handles.DrawBezier(
-            inPoint.rect.center,
-            outPoint.rect.center,
-            inPoint.rect.center + Vector2.left * 50f,
-            outPoint.rect.center - Vector2.left * 50f,
-            Color.white,
-            null,
-            2f
-        );
-
-        if (Handles.Button((inPoint.rect.center + outPoint.rect.center) * 0.5f, Quaternion.identity, 4, 8, Handles.RectangleHandleCap))
+    #if (UNITY_EDITOR) 
+        public void Draw()
         {
-            if (OnClickRemoveConnection != null)
+            Handles.DrawBezier(
+                inPoint.rect.center,
+                outPoint.rect.center,
+                inPoint.rect.center + Vector2.left * 50f,
+                outPoint.rect.center - Vector2.left * 50f,
+                Color.white,
+                null,
+                2f
+            );
+
+            if (Handles.Button((inPoint.rect.center + outPoint.rect.center) * 0.5f, Quaternion.identity, 4, 8, Handles.RectangleHandleCap))
             {
-                OnClickRemoveConnection(this);
+                if (OnClickRemoveConnection != null)
+                {
+                    OnClickRemoveConnection(this);
+                }
             }
         }
-    }
+    #endif
 }

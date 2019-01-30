@@ -81,7 +81,7 @@ namespace VolarelaNS
 
             public override void OnCreated()
             {
-                EditorUtility.SetDirty(this);
+                // EditorUtility.SetDirty(this);
                 thisImg.sprite = charTarget.inventoryIcon;
                 ThisGo = gameObject;
             }

@@ -62,7 +62,7 @@ namespace VolarelaNS
 						SetSizeObj();
 						break;
 				}
-				EditorUtility.SetDirty(thisActiveChild);
+				// EditorUtility.SetDirty(thisActiveChild);
 			}
 
 			private void DestroyImediateChild()
